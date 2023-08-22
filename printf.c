@@ -20,18 +20,12 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			switch (format[i])
-			{
-				case 'c':
-					count += _putchar(va_arg(args, int));
-					break;
-				case 's':
-					count += print_str(va_arg(args, char *), j);
-					break;
-				default:
-					count += _putchar(format[i]);
-					break;
-			}
+			if (format[i] == 'c')
+				count += _putchar(va_arg(args, int));
+			else if (format[i] == 's')
+				count += print_str(va_arg(args, char *), j);
+			else
+				count += _putchar(format[i]);
 		}
 		else
 			count += _putchar(format[i]);

@@ -22,7 +22,7 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
-    
+
 	a1 = _printf("%s", "This sentence is retrieved from va_args!\n");
 	a2 = printf("%s", "This sentence is retrieved from va_args!\n");
 
