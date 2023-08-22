@@ -39,7 +39,7 @@ int main(void)
     a1 = _printf("Should print a single percent sign: %%\n");
 	a2 = printf("Should print a single percent sign: %%\n");
 
-	printf("%i, %i\n\n", a1, a2);
+	printf("%d, %d\n\n", a1, a2);
 
     /** a1 = _printf("%%\n");
 	a2 = printf("%%\n");
