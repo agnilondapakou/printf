@@ -22,10 +22,26 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");*/
-	a1 = _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+    
+	a1 = _printf("%s", "This sentence is retrieved from va_args!\n");
+	a2 = printf("%s", "This sentence is retrieved from va_args!\n");
+
+	printf("%i, %i\n\n", a1, a2);
+
+    a1 = _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
 	a2 = printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
 
-	printf("%i, %i", a1, a2);
+	printf("%i, %i\n\n", a1, a2);
+
+    a1 = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+	a2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+
+	printf("%i, %i\n\n", a1, a2);
+
+    a1 = _printf("%%\n");
+	a2 = printf("%%\n");
+
+	printf("%i, %i\n\n", a1, a2);
    /** _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%d]\n", -762534);

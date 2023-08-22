@@ -1,0 +1,32 @@
+8.
+_printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+
+
+10.
+_printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+
+
+11.
+_printf("%%");
+
+
+12.
+_printf("Should print a single percent sign: %%\n");
+
+
+13.
+_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+
+
+14.
+_printf("css%ccs%scscscs", 'T', "Test");
+
+
+
+15.
+_printf(str); where str is a big string
+
+
+19.
+%Lengths differ.Lengths differ.
+_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
