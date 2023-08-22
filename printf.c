@@ -5,7 +5,6 @@
 /**
   * _printf - prints output according the format
   * @format: the output format
-  *
   * Return: number of caracters.
   */
 int _printf(const char *format, ...)
@@ -14,7 +13,6 @@ int _printf(const char *format, ...)
 	int j = 0;
 	int count = 0;
 	va_list args;
-	char *str;
 
 	va_start(args, format);
 	while (format && format[i])
@@ -25,25 +23,18 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					j = va_arg(args, int);
-					_putchar(j);
-					count++;
+					count += _putchar(va_arg(args, int));
 					break;
 				case 's':
-					str = va_arg(args, char *);
-					count += print_str(str, j);
+					count += print_str(va_arg(args, char *), j);
 					break;
 				default:
-					_putchar(format[i]);
-					count++;
+					count += _putchar(format[i]);
 					break;
 			}
 		}
 		else
-		{
-			_putchar(format[i]);
-			count++;
-		}
+			count += _putchar(format[i]);
 		i++;
 	}
 	va_end(args);

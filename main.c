@@ -33,8 +33,11 @@ int main(void)
 
 	printf("%i, %i\n\n", a1, a2);*/
 
-    a1 = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
-	a2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+
+    a1 = _printf("Should print a single percent sign: %%\n");
+	a2 = printf("Should print a single percent sign: %%\n");
 
 	printf("%i, %i\n\n", a1, a2);
 
