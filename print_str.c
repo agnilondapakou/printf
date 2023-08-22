@@ -5,7 +5,6 @@
  * print_str - prints string
  * @str: pointer to char
  * @j: int number
- * @count: int counter
  *
  * Return: void
  */
