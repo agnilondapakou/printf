@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
-					print_str(str, j, count);
+					count += print_str(str, j);
 					break;
 				default:
 					_putchar('%');

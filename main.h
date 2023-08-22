@@ -3,6 +3,6 @@
 
 int _printf(const char *format, ...);
 int _putchar(int c);
-void print_str(char *str, unsigned int j, unsigned int count);
+int print_str(char *str, unsigned int j);
 
 #endif

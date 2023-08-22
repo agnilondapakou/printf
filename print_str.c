@@ -2,22 +2,25 @@
 #include "stdio.h"
 
 /**
-  * print_str - prints string
-  * @str: pointer to char
-  * @j: int number
-  * @count: int counter
-  *
-  * Return: void
-  */
-void print_str(char *str, unsigned int j, unsigned int count)
+ * print_str - prints string
+ * @str: pointer to char
+ * @j: int number
+ * @count: int counter
+ *
+ * Return: void
+ */
+int print_str(char *str, unsigned int j)
 {
+	int len = 0;
+
 	if (str != NULL)
 	{
 		while (str[j])
 		{
 			_putchar(str[j]);
 			j++;
-			count++;
+			len++;
 		}
 	}
+	return (len);
 }
