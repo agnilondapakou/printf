@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 				count += print_str(va_arg(args, char *), j);
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_int(va_arg(args, int));
+			else if (format[i] == '\0')
+				return (-1);
 			else
 				count += _putchar(format[i]);
 		}

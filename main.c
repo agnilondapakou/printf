@@ -36,8 +36,8 @@ int main(void)
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
 
-    a1 = _printf("Should print a single percent sign: %%\n");
-	a2 = printf("Should print a single percent sign: %%\n");
+    a1 = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	a2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 
 	_printf("Length:[%d, %i]\n", a1, a1);
     printf("Length:[%d, %i]\n", a2, a2);
