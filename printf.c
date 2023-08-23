@@ -10,7 +10,6 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	int j = 0;
 	int count = 0;
 	va_list args;
 
@@ -20,26 +19,13 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c')
-				count += _putchar(va_arg(args, int));
-			else if (format[i] == 's')
-				count += print_str(va_arg(args, char *), j);
-			else if (format[i] == 'd' || format[i] == 'i')
-				count += print_int(va_arg(args, int));
-			else if (format[i] == '\0')
-				return (-1);
-			else if (format[i] == '%')
-				count += _putchar('%');
-			else if (format[i] == 'b')
-				count += print_binary(va_arg(args, int));
-			else
-			{
-				count += _putchar('%');
-				count += _putchar(format[i]);
-			}
+			count += handle_format(format + i, args);
 		}
 		else
-			count += _putchar(format[i]);
+		{
+			_putchar(format[i]);
+			count++;
+		}
 		i++;
 	}
 	va_end(args);
