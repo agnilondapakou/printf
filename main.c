@@ -44,6 +44,8 @@ int main(void)
     _printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
 
+    _printf("%b\n", 98);
+
     /** a1 = _printf("%%\n");
 	a2 = printf("%%\n");
 
