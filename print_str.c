@@ -14,7 +14,7 @@ int print_str(char *str, unsigned int j)
 
 	if (str != NULL)
 	{
-		while (str[j])
+		while (str[j] != '\0')
 		{
 			_putchar(str[j]);
 			j++;
